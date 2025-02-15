@@ -15,6 +15,15 @@ provider "google" {
 resource "google_storage_bucket" "mybucket" {
     name = "helenas_first_project_2395z578374" #ensure globally unique
     location = "us-west1"
+    
+    versioning {
+        enabled = true
+    }
+
+    labels = {
+        environment = "student-lab"
+        managed_by = "terraform"
+    }
 }
 
 output "bucket_name" {

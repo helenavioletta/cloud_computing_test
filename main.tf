@@ -12,7 +12,7 @@ provider "google" {
     region = "us-west1"
 }
 
-resource "google_storage_bucket" "mybucket" {
+resource "google_storage_bucket" "vm_instance" {
     name = "helenas_first_project_2395z578374" #ensure globally unique
     location = "us-west1"
     
